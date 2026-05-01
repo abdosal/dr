@@ -1,5 +1,9 @@
 import { useLang } from "@/lib/lang-context";
-import smileImg from "@/assets/smile-result.jpg";
+import whitening from "@/assets/result-whitening.jpg";
+import veneers from "@/assets/result-veneers.jpg";
+import alignment from "@/assets/result-alignment.jpg";
+
+const IMAGES = [whitening, veneers, alignment];
 
 export function Results() {
   const { t } = useLang();
@@ -22,9 +26,9 @@ export function Results() {
             >
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={smileImg}
+                  src={IMAGES[i]}
                   alt={c.title}
-                  width={1024}
+                  width={1280}
                   height={768}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

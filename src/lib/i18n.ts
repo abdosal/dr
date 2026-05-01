@@ -255,4 +255,4 @@ export const translations = {
   },
 } as const;
 
-export type Translation = typeof translations.en;
+export type Translation = (typeof translations)[Lang];

@@ -32,6 +32,31 @@ export function Header() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const languageSwitcher = (
+    <div
+      className="hidden sm:flex items-center gap-1 rounded-full bg-white/45 p-1"
+      aria-label={t.ui.language}
+    >
+      {([
+        ["fr", "FR"],
+        ["ar", "AR"],
+      ] as const).map(([value, label]) => (
+        <button
+          key={value}
+          onClick={() => setLang(value)}
+          className={cn(
+            "rounded-full px-3 py-1.5 text-xs font-semibold transition-all",
+            lang === value
+              ? "bg-white text-foreground shadow-sm"
+              : "text-foreground/70 hover:text-foreground"
+          )}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  );
+
   return (
     <header
       className={cn(
@@ -71,14 +96,10 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold text-foreground/70 hover:text-foreground hover:bg-white/40 transition-all"
-              aria-label="Toggle language"
-            >
-              <Globe className="w-3.5 h-3.5" />
-              {lang.toUpperCase()}
-            </button>
+            <div className="hidden sm:flex items-center gap-2">
+              <Globe className="w-3.5 h-3.5 text-foreground/60" />
+              {languageSwitcher}
+            </div>
             <button
               onClick={() => go("contact")}
               className="hidden md:inline-flex px-5 py-2.5 rounded-full gradient-primary text-primary-foreground text-sm font-semibold shadow-glass hover:shadow-glow transition-all hover:-translate-y-0.5"
@@ -114,13 +135,31 @@ export function Header() {
                 </button>
               ))}
               <div className="flex gap-2 mt-2 px-2">
-                <button
-                  onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-                  className="flex-1 px-4 py-3 rounded-2xl text-sm font-semibold bg-white/40 hover:bg-white/60 transition-colors"
-                >
-                  <Globe className="w-4 h-4 inline mr-1.5" />
-                  {lang.toUpperCase()}
-                </button>
+                <div className="flex-1 rounded-2xl bg-white/40 p-1">
+                  <div className="mb-1 flex items-center justify-center gap-1 text-[11px] font-semibold text-foreground/60">
+                    <Globe className="h-3.5 w-3.5" />
+                    {t.ui.language}
+                  </div>
+                  <div className="flex gap-1">
+                    {([
+                      ["fr", "FR"],
+                      ["ar", "AR"],
+                    ] as const).map(([value, label]) => (
+                      <button
+                        key={value}
+                        onClick={() => setLang(value)}
+                        className={cn(
+                          "flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-colors",
+                          lang === value
+                            ? "bg-white text-foreground"
+                            : "text-foreground/70 hover:bg-white/40"
+                        )}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 <button
                   onClick={() => go("contact")}
                   className="flex-[2] px-4 py-3 rounded-2xl gradient-primary text-primary-foreground text-sm font-semibold shadow-glass"

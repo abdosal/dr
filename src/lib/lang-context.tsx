@@ -15,9 +15,28 @@ export function LangProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("smilecare-lang") as Lang | null;
-      if (saved === "fr" || saved === "en") setLangState(saved);
+      if (saved === "fr" || saved === "ar") setLangState(saved);
+      if (saved === "en") setLangState("fr");
     } catch {}
   }, []);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.lang = lang;
+    root.dir = lang === "ar" ? "rtl" : "ltr";
+    root.dataset.lang = lang;
+
+    document.title = translations[lang].meta.title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    metaDescription?.setAttribute("content", translations[lang].meta.description);
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    ogTitle?.setAttribute("content", translations[lang].meta.title);
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    ogDescription?.setAttribute("content", translations[lang].meta.description);
+  }, [lang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);

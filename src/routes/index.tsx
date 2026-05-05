@@ -17,14 +17,18 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "SmileCare — Premium Dental Clinic in Paris" },
+      { title: "SmileCare | Clinique dentaire premium" },
       {
         name: "description",
         content:
-          "SmileCare is a premium dental clinic in Paris. Whitening, implants, orthodontics & aesthetic dentistry. Book your consultation online.",
+          "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
       },
-      { property: "og:title", content: "SmileCare — Premium Dental Clinic" },
-      { property: "og:description", content: "Modern, painless dental care in the heart of Paris." },
+      { property: "og:title", content: "SmileCare | Clinique dentaire premium" },
+      {
+        property: "og:description",
+        content:
+          "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+      },
     ],
   }),
 });
@@ -32,6 +36,7 @@ export const Route = createFileRoute("/")({
 function Page() {
   useReveal();
   useActiveSection([...SECTIONS]);
+
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Header />

@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import faviconPng from "../assets/iconed.png";
 
 function NotFoundComponent() {
   return (
@@ -29,22 +30,31 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SmileCare | Clinique dentaire premium" },
+      {
+        name: "description",
+        content:
+          "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+      },
+      { name: "author", content: "SmileCare" },
+      { property: "og:title", content: "SmileCare | Clinique dentaire premium" },
+      {
+        property: "og:description",
+        content:
+          "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap",
       },
+      { rel: "icon", type: "image/png", href: faviconPng },
+      { rel: "apple-touch-icon", href: faviconPng },
       { rel: "stylesheet", href: appCss },
     ],
   }),
@@ -55,7 +65,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <HeadContent />
       </head>

@@ -22,7 +22,7 @@ export function About() {
                 </div>
                 <div className="glass-strong rounded-3xl p-5 shadow-soft">
                   <div className="text-3xl font-display gradient-text font-semibold">15+</div>
-                  <div className="text-xs text-muted-foreground mt-1">years caring for smiles</div>
+                  <div className="text-xs text-muted-foreground mt-1">{t.ui.yearsCaring}</div>
                 </div>
               </div>
             </div>

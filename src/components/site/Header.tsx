@@ -77,7 +77,7 @@ export function Header() {
                 <path d="M12 2C8 2 6 4 6 7c0 2 .5 4 1.5 6 .8 1.6 1 3 1 4.5 0 1.5.5 2.5 1.5 2.5s1.5-1 2-2.5c.5-1.5 1.5-1.5 2 0s1 2.5 2 2.5 1.5-1 1.5-2.5c0-1.5.2-2.9 1-4.5 1-2 1.5-4 1.5-6 0-3-2-5-6-5z" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="font-display text-xl tracking-tight">SmileCare</span>
+            <span className="font-display text-xl tracking-tight">El haila dental clinique</span>
           </button>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -120,7 +120,7 @@ export function Header() {
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300",
-            open ? "max-h-[600px] mt-3 opacity-100" : "max-h-0 opacity-0"
+            open ? "max-h-150 mt-3 opacity-100" : "max-h-0 opacity-0"
           )}
         >
           <div className="glass-strong rounded-3xl p-4 shadow-soft">
@@ -162,7 +162,7 @@ export function Header() {
                 </div>
                 <button
                   onClick={() => go("contact")}
-                  className="flex-[2] px-4 py-3 rounded-2xl gradient-primary text-primary-foreground text-sm font-semibold shadow-glass"
+                  className="flex-2 px-4 py-3 rounded-2xl gradient-primary text-primary-foreground text-sm font-semibold shadow-glass"
                 >
                   {t.nav.book}
                 </button>

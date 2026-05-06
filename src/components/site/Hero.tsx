@@ -53,7 +53,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-[2rem] shadow-glow">
               <img
                 src={heroImg}
-                alt="SmileCare clinic interior"
+                alt="El haila dental clinique clinic interior"
                 width={1536}
                 height={1024}
                 className="h-[420px] w-full object-cover sm:h-[520px]"

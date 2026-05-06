@@ -3,9 +3,9 @@ export type Lang = "fr" | "ar";
 export const translations = {
   fr: {
     meta: {
-      title: "SmileCare | Clinique dentaire premium",
+      title: "El haila dental clinique | Clinique dentaire premium",
       description:
-        "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+        "El haila dental clinique propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
     },
     ui: {
       language: "Langue",
@@ -69,8 +69,8 @@ export const translations = {
     },
     about: {
       title: "Une clinique pensée pour vous",
-      subtitle: "À propos de SmileCare",
-      desc: "Depuis plus de 15 ans, SmileCare offre des soins dentaires d'excellence dans un environnement apaisant. Notre approche allie expertise médicale, esthétique soignée et écoute personnalisée.",
+      subtitle: "À propos de El haila dental clinique",
+      desc: "Depuis plus de 15 ans, El haila dental clinique offre des soins dentaires d'excellence dans un environnement apaisant. Notre approche allie expertise médicale, esthétique soignée et écoute personnalisée.",
       bullets: [
         "Diagnostic personnalisé et plan de traitement clair",
         "Équipement de pointe pour des résultats précis",
@@ -176,9 +176,9 @@ export const translations = {
   },
   ar: {
     meta: {
-      title: "SmileCare | عيادة أسنان راقية",
+      title: "El haila dental clinique | عيادة أسنان راقية",
       description:
-        "SmileCare تقدم علاجات أسنان حديثة وتجميلية وبدون ألم. احجز موعدك بسهولة عبر الموقع.",
+        "El haila dental clinique تقدم علاجات أسنان حديثة وتجميلية وبدون ألم. احجز موعدك بسهولة عبر الموقع.",
     },
     ui: {
       language: "اللغة",
@@ -242,8 +242,8 @@ export const translations = {
     },
     about: {
       title: "عيادة مصممة من أجلك",
-      subtitle: "عن SmileCare",
-      desc: "منذ أكثر من 15 عامًا، تقدم SmileCare رعاية أسنان متميزة في أجواء هادئة ومريحة. نجمع بين الخبرة الطبية واللمسة الجمالية والاهتمام الشخصي بكل مريض.",
+      subtitle: "عن El haila dental clinique",
+      desc: "منذ أكثر من 15 عامًا، تقدم El haila dental clinique رعاية أسنان متميزة في أجواء هادئة ومريحة. نجمع بين الخبرة الطبية واللمسة الجمالية والاهتمام الشخصي بكل مريض.",
       bullets: [
         "تشخيص مخصص وخطة علاج واضحة",
         "أجهزة متطورة لنتائج دقيقة",

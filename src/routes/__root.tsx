@@ -30,18 +30,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SmileCare | Clinique dentaire premium" },
+      { title: "El haila dental clinique | Clinique dentaire premium" },
       {
         name: "description",
         content:
-          "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+          "El haila dental clinique propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
       },
-      { name: "author", content: "SmileCare" },
-      { property: "og:title", content: "SmileCare | Clinique dentaire premium" },
+      { name: "author", content: "El haila dental clinique" },
+      { property: "og:title", content: "El haila dental clinique | Clinique dentaire premium" },
       {
         property: "og:description",
         content:
-          "SmileCare propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+          "El haila dental clinique propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

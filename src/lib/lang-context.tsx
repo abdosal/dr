@@ -14,7 +14,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("smilecare-lang") as Lang | null;
+      const saved = localStorage.getItem("El haila dental clinique-lang") as Lang | null;
       if (saved === "fr" || saved === "ar") setLangState(saved);
       if (saved === "en") setLangState("fr");
     } catch {}
@@ -41,7 +41,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const setLang = (l: Lang) => {
     setLangState(l);
     try {
-      localStorage.setItem("smilecare-lang", l);
+      localStorage.setItem("El haila dental clinique-lang", l);
     } catch {}
   };
 

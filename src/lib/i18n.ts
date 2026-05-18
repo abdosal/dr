@@ -3,9 +3,9 @@ export type Lang = "fr" | "ar";
 export const translations = {
   fr: {
     meta: {
-      title: "El haila dental clinique | Clinique dentaire premium",
+      title: "(nom votre cabinet) | Clinique dentaire premium",
       description:
-        "El haila dental clinique propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
+        "(nom votre cabinet) propose des soins dentaires modernes, esthétiques et sans douleur. Réservez votre consultation en ligne.",
     },
     ui: {
       language: "Langue",
@@ -23,7 +23,7 @@ export const translations = {
       home: "Accueil",
       about: "À propos",
       services: "Services",
-      pricing: "Tarifs",
+      pricing: "Prendre RDV",
       results: "Résultats",
       faq: "FAQ",
       contact: "Contact",
@@ -69,8 +69,8 @@ export const translations = {
     },
     about: {
       title: "Une clinique pensée pour vous",
-      subtitle: "À propos de El haila dental clinique",
-      desc: "Depuis plus de 15 ans, El haila dental clinique offre des soins dentaires d'excellence dans un environnement apaisant. Notre approche allie expertise médicale, esthétique soignée et écoute personnalisée.",
+      subtitle: "À propos de (nom votre cabinet)",
+      desc: "Depuis plus de 15 ans, (nom votre cabinet) offre des soins dentaires d'excellence dans un environnement apaisant. Notre approche allie expertise médicale, esthétique soignée et écoute personnalisée.",
       bullets: [
         "Diagnostic personnalisé et plan de traitement clair",
         "Équipement de pointe pour des résultats précis",
@@ -81,22 +81,21 @@ export const translations = {
     services: {
       title: "Nos services",
       subtitle: "Une gamme complète de soins",
-      from: "À partir de",
       list: [
-        { name: "Détartrage", desc: "Nettoyage profond et polissage", price: "600 MAD" },
-        { name: "Blanchiment", desc: "Sourire éclatant en une séance", price: "3 500 MAD" },
-        { name: "Soins esthétiques", desc: "Facettes et composites", price: "4 500 MAD" },
-        { name: "Implants", desc: "Restauration durable et esthétique", price: "12 000 MAD" },
-        { name: "Orthodontie", desc: "Aligneurs invisibles et bagues", price: "18 000 MAD" },
-        { name: "Couronnes", desc: "Céramique haute qualité", price: "6 500 MAD" },
-        { name: "Parodontie", desc: "Soin des gencives et prévention", price: "1 200 MAD" },
-        { name: "Urgences", desc: "Prise en charge rapide 7j/7", price: "800 MAD" },
+        { name: "Détartrage", desc: "Nettoyage profond et polissage" },
+        { name: "Blanchiment", desc: "Sourire éclatant en une séance" },
+        { name: "Soins esthétiques", desc: "Facettes et composites" },
+        { name: "Implants", desc: "Restauration durable et esthétique" },
+        { name: "Orthodontie", desc: "Aligneurs invisibles et bagues" },
+        { name: "Couronnes", desc: "Céramique haute qualité" },
+        { name: "Parodontie", desc: "Soin des gencives et prévention" },
+        { name: "Urgences", desc: "Prise en charge rapide 7j/7" },
       ],
     },
     pricing: {
-      title: "Tarifs transparents",
-      subtitle: "Aucune mauvaise surprise",
-      cols: ["Soin", "Description", "Tarif"],
+      title: "Réservez votre soin",
+      subtitle: "Un clic suffit",
+      cta: "Prendre RDV",
     },
     results: {
       title: "Avant / Après",
@@ -176,9 +175,9 @@ export const translations = {
   },
   ar: {
     meta: {
-      title: "El haila dental clinique | عيادة أسنان راقية",
+      title: "(nom votre cabinet) | عيادة أسنان راقية",
       description:
-        "El haila dental clinique تقدم علاجات أسنان حديثة وتجميلية وبدون ألم. احجز موعدك بسهولة عبر الموقع.",
+        "(nom votre cabinet) تقدم علاجات أسنان حديثة وتجميلية وبدون ألم. احجز موعدك بسهولة عبر الموقع.",
     },
     ui: {
       language: "اللغة",
@@ -196,7 +195,7 @@ export const translations = {
       home: "الرئيسية",
       about: "من نحن",
       services: "الخدمات",
-      pricing: "الأسعار",
+      pricing: "احجز موعدًا",
       results: "النتائج",
       faq: "الأسئلة الشائعة",
       contact: "اتصل بنا",
@@ -242,8 +241,8 @@ export const translations = {
     },
     about: {
       title: "عيادة مصممة من أجلك",
-      subtitle: "عن El haila dental clinique",
-      desc: "منذ أكثر من 15 عامًا، تقدم El haila dental clinique رعاية أسنان متميزة في أجواء هادئة ومريحة. نجمع بين الخبرة الطبية واللمسة الجمالية والاهتمام الشخصي بكل مريض.",
+      subtitle: "عن (nom votre cabinet)",
+      desc: "منذ أكثر من 15 عامًا، تقدم (nom votre cabinet) رعاية أسنان متميزة في أجواء هادئة ومريحة. نجمع بين الخبرة الطبية واللمسة الجمالية والاهتمام الشخصي بكل مريض.",
       bullets: [
         "تشخيص مخصص وخطة علاج واضحة",
         "أجهزة متطورة لنتائج دقيقة",
@@ -254,22 +253,21 @@ export const translations = {
     services: {
       title: "خدماتنا",
       subtitle: "مجموعة متكاملة من العلاجات",
-      from: "ابتداءً من",
       list: [
-        { name: "إزالة الجير", desc: "تنظيف عميق وتلميع", price: "600 MAD" },
-        { name: "تبييض الأسنان", desc: "ابتسامة أكثر إشراقًا في جلسة واحدة", price: "3 500 MAD" },
-        { name: "تجميل الأسنان", desc: "قشور تجميلية وحشوات تجميلية", price: "4 500 MAD" },
-        { name: "زراعة الأسنان", desc: "ترميم دائم وجمالي", price: "12 000 MAD" },
-        { name: "تقويم الأسنان", desc: "مصففات شفافة وتقويم ثابت", price: "18 000 MAD" },
-        { name: "التيجان", desc: "سيراميك عالي الجودة", price: "6 500 MAD" },
-        { name: "علاج اللثة", desc: "عناية باللثة والوقاية", price: "1 200 MAD" },
-        { name: "الحالات المستعجلة", desc: "استقبال سريع طوال الأسبوع", price: "800 MAD" },
+        { name: "إزالة الجير", desc: "تنظيف عميق وتلميع" },
+        { name: "تبييض الأسنان", desc: "ابتسامة أكثر إشراقًا في جلسة واحدة" },
+        { name: "تجميل الأسنان", desc: "قشور تجميلية وحشوات تجميلية" },
+        { name: "زراعة الأسنان", desc: "ترميم دائم وجمالي" },
+        { name: "تقويم الأسنان", desc: "مصففات شفافة وتقويم ثابت" },
+        { name: "التيجان", desc: "سيراميك عالي الجودة" },
+        { name: "علاج اللثة", desc: "عناية باللثة والوقاية" },
+        { name: "الحالات المستعجلة", desc: "استقبال سريع طوال الأسبوع" },
       ],
     },
     pricing: {
-      title: "أسعار واضحة",
-      subtitle: "بدون مفاجآت",
-      cols: ["العلاج", "الوصف", "السعر"],
+      title: "احجز علاجك",
+      subtitle: "خطوة واحدة تكفي",
+      cta: "احجز الآن",
     },
     results: {
       title: "قبل / بعد",

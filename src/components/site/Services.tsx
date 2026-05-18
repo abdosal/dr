@@ -30,18 +30,14 @@ export function Services() {
             return (
               <div
                 key={i}
-                className="group glass-strong rounded-3xl p-6 shadow-soft hover:shadow-glow transition-all hover:-translate-y-1 reveal flex flex-col"
+                className="group glass-strong rounded-3xl p-6 shadow-soft hover:shadow-glow transition-all hover:-translate-y-1 reveal"
                 style={{ transitionDelay: `${(i % 4) * 80}ms` }}
               >
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/15 to-accent/30 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg mb-2">{s.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4 flex-1">{s.desc}</p>
-                <div className="pt-3 border-t border-border/60">
-                  <div className="text-xs text-muted-foreground">{t.services.from}</div>
-                  <div className="font-display text-xl font-semibold gradient-text">{s.price}</div>
-                </div>
+                <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
             );
           })}

@@ -1,7 +1,23 @@
+import {
+  Sparkles,
+  Smile,
+  Gem,
+  Wrench,
+  AlignCenter,
+  Crown,
+  Activity,
+  Siren,
+} from "lucide-react";
 import { useLang } from "@/lib/lang-context";
+
+const ICONS = [Sparkles, Smile, Gem, Wrench, AlignCenter, Crown, Activity, Siren];
 
 export function Pricing() {
   const { t } = useLang();
+
+  const book = () =>
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+
   return (
     <section id="pricing" className="py-20 lg:py-28 relative">
       <div className="blob bg-primary/20 w-[400px] h-[400px] bottom-0 right-0" />
@@ -13,23 +29,31 @@ export function Pricing() {
           <h2 className="text-4xl lg:text-5xl">{t.pricing.title}</h2>
         </div>
 
-        <div className="max-w-4xl mx-auto glass-strong rounded-3xl shadow-glass overflow-hidden reveal">
-          <div className="grid grid-cols-12 px-6 py-4 bg-primary/8 text-xs font-semibold uppercase tracking-wider text-primary">
-            <div className="col-span-4">{t.pricing.cols[0]}</div>
-            <div className="col-span-5 hidden sm:block">{t.pricing.cols[1]}</div>
-            <div className="col-span-8 sm:col-span-3 text-right">{t.pricing.cols[2]}</div>
-          </div>
-          <div className="divide-y divide-border/60">
-            {t.services.list.map((s, i) => (
-              <div key={i} className="grid grid-cols-12 px-6 py-4 items-center hover:bg-white/40 transition-colors">
-                <div className="col-span-4 font-medium">{s.name}</div>
-                <div className="col-span-5 hidden sm:block text-sm text-muted-foreground">{s.desc}</div>
-                <div className="col-span-8 sm:col-span-3 text-right font-display text-lg font-semibold gradient-text">
-                  {s.price}
+        <div className="grid sm:grid-cols-2 gap-5">
+          {t.services.list.map((s, i) => {
+            const Icon = ICONS[i];
+            return (
+              <div
+                key={i}
+                className="group glass-strong rounded-3xl p-7 shadow-soft hover:shadow-glow transition-all hover:-translate-y-1 reveal flex items-start gap-5"
+                style={{ transitionDelay: `${(i % 4) * 80}ms` }}
+              >
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/15 to-accent/30 flex items-center justify-center text-primary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg mb-1">{s.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{s.desc}</p>
+                  <button
+                    onClick={book}
+                    className="inline-flex items-center px-4 py-2 rounded-full gradient-primary text-primary-foreground text-sm font-semibold shadow-glass hover:shadow-glow transition-all hover:-translate-y-0.5"
+                  >
+                    {t.pricing.cta}
+                  </button>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
